@@ -1,0 +1,206 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #220f08;
+    color: #db1818;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0rem;
+}
+
+header {
+    background: #220f08;
+    color: #4a3525;
+    padding: 0rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Adjust padding for responsiveness */
+}
+
+header .branding {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 110px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 1rem;
+}
+
+header .company-name {
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-family: 'Lobster', cursive;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 0.5rem;
+}
+
+.hero, .menu, .about, .contact {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+.hero {
+    background: url('image/Home.png') no-repeat center center/cover;
+    color: #fff;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+    background: url('image/Menu.jpg') no-repeat center center/cover; /* Replace with your menu background image */
+    color: #fff;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Adjust shadow as needed */
+}
+
+.about {
+    background: url('image/about.jfif') no-repeat center center/cover; /* Replace with your about background image */
+    color: #fff;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Adjust shadow as needed */
+}
+
+.contact {
+    background: url('contact-background.jpg') no-repeat center center/cover; /* Replace with your contact background image */
+    color: #fff;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Adjust shadow as needed */
+}
+
+.menu h2, .about h2, .contact h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #4a3525;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.about p, .contact p {
+    margin: 1rem 0;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.button-74 {
+    background-color: #d1ab8c;
+    border: 1px solid #422800;
+    border-radius: 20px;
+    box-shadow: #422800 2px 2px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 10px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-74:hover {
+    background-color: #fff;
+}
+
+.button-74:active {
+    box-shadow: #422800 1px 1px 0 0;
+    transform: translate(1px, 1px);
+}
+
+@media (min-width: 768px) {
+    .button-74 {
+        min-width: 80px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 60px; /* Adjust logo size for smaller screens */
+        margin-bottom: 0.5rem;
+    }
+
+    .company-name {
+        font-size: 1.5rem; /* Adjust company name font size for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem; /* Adjust hero heading size for smaller screens */
+    }
+
+    .menu ul, .about, .contact {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .menu h2, .about h2, .contact h2 {
+        font-size: 1.5rem; /* Adjust section heading size for smaller screens */
+    }
+}
