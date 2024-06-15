@@ -34,10 +34,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Allow content to wrap to a new line */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem; /* Adjust padding for responsiveness */
+    padding: 1rem; /* Adjust padding for responsiveness */
 }
 
 header .branding {
@@ -46,23 +47,24 @@ header .branding {
 }
 
 header .logo {
-    width: 110px; /* Adjust size as needed */
+    width: 80px; /* Adjust size as needed */
     height: auto;
     margin-right: 1rem;
 }
 
 header .company-name {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: #ffffff;
     font-family: 'Lobster', cursive;
+    margin-right: 1rem;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center navigation horizontally */
     align-items: center;
-    margin: 0;
+    margin-top: 1rem; /* Adjust margin for spacing */
     padding: 0;
 }
 
@@ -71,14 +73,14 @@ nav ul li {
 }
 
 .hero, .menu, .about, .contact {
-    min-height: 100vh;
+    padding: 2rem 1rem; /* Adjust padding for responsiveness */
+    text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    min-height: 100vh; /* Ensure sections take up full viewport height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 2rem 0;
-    overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
 .hero {
@@ -166,5 +168,59 @@ footer {
     .button-74 {
         min-width: 80px;
         padding: 0 15px;
+    }
+
+    .header-content {
+        padding: 1rem 2rem; /* Increase padding for larger screens */
+    }
+
+    header .logo {
+        width: 110px; /* Restore logo size for larger screens */
+    }
+
+    header .company-name {
+        font-size: 2.5rem; /* Restore company name font size for larger screens */
+        margin-right: 2rem; /* Adjust margin for larger screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .hero, .menu, .about, .contact {
+        padding: 2rem 0.5rem; /* Adjust padding for smaller screens */
+    }
+
+    .about, .contact {
+        min-height: 50vh; /* Ensure sections take up at least 50% of viewport height */
+        background-size: cover; /* Ensure background covers entire section */
+        background-position: center; /* Center background image */
+    }
+
+    .about h2, .contact h2 {
+        font-size: 1.8rem; /* Adjust heading font size for smaller screens */
+    }
+
+    .header-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+
+    header .logo {
+        width: 60px; /* Adjust logo size for smaller screens */
+        margin-bottom: 0.5rem; /* Adjust margin for spacing */
+    }
+
+    header .company-name {
+        font-size: 1.5rem; /* Adjust company name font size for smaller screens */
+        margin-bottom: 1rem; /* Adjust margin for spacing */
+    }
+
+    nav ul {
+        flex-direction: row; /* Display navigation links horizontally */
+        justify-content: center;
+        margin-top: 0.5rem; /* Adjust margin for spacing */
+    }
+
+    nav ul li {
+        margin: 0 0.5rem; /* Adjust margin for spacing */
     }
 }
