@@ -187,16 +187,7 @@ footer {
 @media (max-width: 767px) {
     .hero, .menu, .about, .contact {
         padding: 2rem 0.5rem; /* Adjust padding for smaller screens */
-    }
-
-    .about, .contact {
-        min-height: 50vh; /* Ensure sections take up at least 50% of viewport height */
-        background-size: cover; /* Ensure background covers entire section */
-        background-position: center; /* Center background image */
-    }
-
-    .about h2, .contact h2 {
-        font-size: 1.8rem; /* Adjust heading font size for smaller screens */
+        min-height: 100vh; /* Ensure sections take up full viewport height on smaller screens */
     }
 
     .header-content {
