@@ -168,39 +168,3 @@ footer {
         padding: 0 15px;
     }
 }
-
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo {
-        width: 60px; /* Adjust logo size for smaller screens */
-        margin-bottom: 0.5rem;
-    }
-
-    .company-name {
-        font-size: 1.5rem; /* Adjust company name font size for smaller screens */
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-
-    .hero h2 {
-        font-size: 2rem; /* Adjust hero heading size for smaller screens */
-    }
-
-    .menu ul, .about, .contact {
-        padding: 1rem; /* Adjust padding for smaller screens */
-    }
-
-    .menu h2, .about h2, .contact h2 {
-        font-size: 1.5rem; /* Adjust section heading size for smaller screens */
-    }
-}
