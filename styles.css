@@ -17,13 +17,14 @@ body {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0rem;
+    padding: 0;
 }
 
+/* Header styles */
 header {
     background: #220f08;
     color: #4a3525;
-    padding: 0rem 0;
+    padding: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -72,6 +73,7 @@ nav ul li {
     margin: 0 0.5rem;
 }
 
+/* Section styles */
 .hero, .menu, .about, .contact {
     padding: 2rem 1rem; /* Adjust padding for responsiveness */
     text-align: center;
@@ -90,19 +92,19 @@ nav ul li {
 }
 
 .menu {
-    background: url('image/Menu.jpg') no-repeat center center/cover; /* Replace with your menu background image */
+    background: url('image/contact.jfif') no-repeat center center/cover; /* Replace with your menu background image */
     color: #fff;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Adjust shadow as needed */
 }
 
 .about {
-    background: url('image/about.jfif') no-repeat center center/cover; /* Replace with your about background image */
+    background: url('image/Menu.jpg') no-repeat center center/cover; /* Replace with your about background image */
     color: #fff;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Adjust shadow as needed */
 }
 
 .contact {
-    background: url('image/contact.jfif') no-repeat center center/cover; /* Replace with your contact background image */
+    background: url('image/about.jfif') no-repeat center center/cover; /* Replace with your contact background image */
     color: #fff;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Adjust shadow as needed */
 }
@@ -127,6 +129,29 @@ nav ul li {
     margin: 1rem 0;
 }
 
+/* Constrain the maximum width of images */
+.promo-image {
+    max-width: 100%;  /* Ensures the image fits within its container */
+    height: auto;    /* Maintains aspect ratio */
+    display: block;  /* Ensures the image behaves like a block element */
+    margin: 0 auto;  /* Centers the image horizontally */
+}
+
+/* Additional adjustments for the .menu section */
+.menu img {
+    max-width: 40%;  /* Ensure the image fits within 40% of its container */
+    height: auto;
+    display: block;
+    margin: 1rem auto; /* Adds margin for spacing around the image */
+}
+
+/* Additional container styles to prevent overflow */
+.container {
+    overflow: hidden; /* Prevents overflowing content */
+    padding: 1rem;    /* Adds padding for better spacing */
+}
+
+/* Footer styles */
 footer {
     background: #333;
     color: #fff;
@@ -135,6 +160,7 @@ footer {
     margin-top: 2rem;
 }
 
+/* Button styles */
 .button-74 {
     background-color: #d1ab8c;
     border: 1px solid #422800;
@@ -164,6 +190,7 @@ footer {
     transform: translate(1px, 1px);
 }
 
+/* Responsive styles */
 @media (min-width: 768px) {
     .button-74 {
         min-width: 80px;
@@ -181,6 +208,10 @@ footer {
     header .company-name {
         font-size: 2.5rem; /* Restore company name font size for larger screens */
         margin-right: 2rem; /* Adjust margin for larger screens */
+    }
+
+    .menu img {
+        max-width: 30%;  /* Ensure the image fits within 30% of its container */
     }
 }
 
@@ -213,5 +244,9 @@ footer {
 
     nav ul li {
         margin: 0 0.5rem; /* Adjust margin for spacing */
+    }
+
+    .menu img {
+        max-width: 100%;  /* Ensure the image fits within 100% of its container */
     }
 }
