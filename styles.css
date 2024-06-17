@@ -190,6 +190,25 @@ footer {
     transform: translate(1px, 1px);
 }
 
+/* Social media button styles */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-button {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-button:hover {
+    color: #d1ab8c;
+}
+
 /* Responsive styles */
 @media (min-width: 768px) {
     .button-74 {
